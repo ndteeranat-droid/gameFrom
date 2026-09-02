@@ -19,7 +19,13 @@ export default function Navbar() {
             เกี่ยวกับ
           </Link>
         </li>
+        <li>
+         <Link href="/bands" className="navLink">
+            วงดนตรีที่ชื่นชอบ
+        </Link>
+</li>
       </ul>
     </nav>
   );
 }
+        

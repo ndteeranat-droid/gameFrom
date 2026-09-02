@@ -1,6 +1,5 @@
-import Image from "next/image";
 
-// กำหนด Type โครงสร้างข้อมูลรายวิชา
+
 type Course = { 
   id: number; 
   code: string; 
@@ -10,12 +9,12 @@ type Course = {
 }; 
 
 export default function Home() {
-  // 1. ชนิดข้อมูลพื้นฐาน (Primitive Types)
+
   const siteName: string = "Student Course Hub"; 
   const courseCount: number = 5; 
   const isOpen: boolean = true;
   
-  // 2. ข้อมูลแบบ Array (Array Type)
+
   const topics: string[] = [
     "HTML",
     "CSS",
@@ -23,7 +22,7 @@ export default function Home() {
     "Next.js"
   ];
 
-  // 3. ข้อมูลแบบ Object รายวิชาเดี่ยว
+  
   const course: Course = { 
     id: 1, 
     code: "10301231", 
@@ -73,14 +72,14 @@ export default function Home() {
 
   return (
     <main className="p-8 space-y-6"> 
-      {/* ส่วนหัวแสดงชื่อเว็บไซต์และสถานะระบบ */}
+      {}
       <header>
         <h1 className="text-3xl font-bold">{siteName}</h1> 
         <p className="mt-2">จำนวนรายวิชา: {courseCount}</p> 
         <p>สถานะระบบ: {isOpen ? "เปิดใช้งาน" : "ปิดใช้งาน"}</p>
       </header>
 
-      {/* ส่วนแสดงรายการหัวข้อเรียนรู้ด้วย .map() */}
+      {}
       <section>
         <h2 className="text-xl font-semibold mb-2">หัวข้อที่เปิดสอน</h2>
         <ul className="list-disc list-inside"> 
@@ -90,7 +89,7 @@ export default function Home() {
         </ul>
       </section>
 
-      {/* ส่วนแสดงรายการวิชาทั้งหมดด้วย .map() */}
+      {}
       <section className="courseGrid space-y-4">
         <h2 className="text-xl font-semibold">รายการวิชาทั้งหมด</h2>
         {courses.map((item) => (
@@ -104,6 +103,9 @@ export default function Home() {
           </article>
         ))}
       </section>
+
+      
     </main> 
   );
 }
+
